@@ -1,0 +1,15 @@
+#PBS -l nodes=1:ppn=4
+#PBS -l mem=5gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+
+export ABA_SINT_CAP=40000
+
+cd $PBS_O_WORKDIR
+
+# load module and then run abaqus
+#module use /gpfs/group/rhk12/default/sw/modules
+module load abaqus
+echo "Job Started on 'hostname' at 'date'"
+abaqus job=Job-2 cpus=4 interactive
+echo "Job ended at 'date'"
