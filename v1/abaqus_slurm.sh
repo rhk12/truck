@@ -8,7 +8,7 @@
 #SBATCH --account=open
 #SBATCH --partition=open
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-node=4
 #SBATCH --mem=128GB
 #SBATCH --time=03:00:00
  
